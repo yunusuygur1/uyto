@@ -1,0 +1,907 @@
+/* ======================================================= */
+/* === FONT İMPORTLARI (GÜNCELLENDİ) === */
+/* BBH Sans Bogle fontu Google Fonts'ta olmadığı için, 
+   onu sayfanıza ekleyemiyorum. Sizin için bir alternatif font olan 
+   'Monoton' veya 'Anton' fontunu veya sadece 'sans-serif' kullanmasını 
+   sağlayacak şekilde kuralı güncelledim. 
+   Eğer BBH Sans Bogle fontunu kullanmak istiyorsanız, 
+   font dosyalarını projenize ekleyip @font-face kuralı kullanmalısınız. */
+/* ======================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); /* Hizmet kartları için */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    font-family: 'Jersey 20', sans-serif;
+    font-size: 32px;
+    color: #1a1aa6;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.logo sup {
+    font-size: 12px;
+    color: #9a9a9a;
+    position: relative;
+    top: -8px;
+}
+
+/* Sadece nav-links içindeki yazılar Allerta Stencil */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    font-family: 'Allerta Stencil', Arial, sans-serif;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #0f0f0f;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-family: inherit;
+}
+
+.nav-links a:hover {
+    color: #1a1aa6;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1a1aa6;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #1a1aa6;
+}
+
+/* === HERO BÖLÜMÜ === */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 80px;
+    background-color: #1a1aa6;
+    color: #fff;
+    overflow: hidden;
+    border-bottom-left-radius: 300px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle at top left, #0022ff 0%, #1a1aa6 60%);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: 'Anta', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 30px;
+    color: #d9dcff;
+}
+
+.hero-btn {
+    background-color: #39ff14;
+    color: #000;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #32e512;
+}
+
+/* Hero Görseli */
+.hero-image {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 480px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* === UYTO HİZMETLER BUTONU — AÇIK YEŞİL === */
+.uyto-btn {
+    --green: #1BFD9C;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.uyto-btn:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.uyto-btn:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
+}
+
+.uyto-btn:hover:before {
+    transform: translateX(15em);
+}
+
+/* === HİZMETLER BÖLÜMÜ === */
+.services-section {
+    padding: 100px 80px;
+    position: relative;
+    overflow: hidden; /* Dalganın taşmasını engeller */
+}
+
+.background-wave {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 800px;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.services-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.services-illustration {
+    flex: 1;
+    min-width: 400px;
+}
+
+.services-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.services-grid {
+    flex: 1.2; /* Kartların biraz daha fazla yer kaplaması için */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* === HİZMET KARTLARI (KESKİN TASARIM + GÜÇLÜ GÖLGE) === */
+.service-card {
+    background-color: #ffffff;
+    border: 2px solid #000; /* KENARLIK SİYAH VE KALIN OLDU */
+    border-radius: 0; /* KENARLAR KESKİNLEŞTİ (SIFIRLANDI) */
+    padding: 28px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+/* YEŞİL GÖLGE EFEKTİ ARTIRILDI */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 45px 5px rgba(27, 253, 156, 0.65); /* Daha parlak ve geniş yeşil gölge */
+}
+
+.card-icon {
+    margin-bottom: 15px;
+}
+
+.card-icon svg {
+    width: 32px;
+    height: 32px;
+    color: #1a1aa6;
+}
+
+.service-card h3 {
+    font-family: 'Black Ops One', cursive; /* YENİ FONT ATANDI */
+    font-size: 1.6rem; 
+    margin: 0 0 10px 0;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+.service-card p {
+    font-family: 'Bahianita', cursive; /* YENİ FONT ATANDI */
+    font-size: 1.1rem; 
+    line-height: 1.5; 
+    color: #444; 
+    margin: 0;
+}
+
+/* =================== NEDEN BİZ & TEKNOLOJİLER =================== */
+/* Genel Bölüm Stili */
+.whyus-section {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 8%;
+    color: #fff;
+    background: linear-gradient(145deg, #1d1df0 0%, #0038a8 70%);
+}
+
+/* Dekoratif Üst Dalga */
+.whyus-bg {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: #fff;
+    clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Ana İçerik Konteyneri (Flexbox) */
+.whyus-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Sol Taraf Metin Alanı */
+.whyus-content-left {
+    flex: 1 1 45%;
+}
+
+.whyus-text {
+    font-family: "Fjalla One", sans-serif;
+}
+
+.whyus-text h2 {
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.whyus-text h2 span {
+    color: #00ff9c; /* "Uyto" kelimesi için vurgu rengi */
+}
+
+/* Yazma Efekti Hedef Paragrafı (.typing-text) */
+.typing-text {
+    font-family: "Alfa Slab One", serif; 
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #e6e6e6;
+    margin-bottom: 30px; 
+    border-right: 2px solid #39ff14; 
+    
+    /* DÜZELTME: Metnin sarmalanmasını ve yerinde kalmasını sağlar */
+    white-space: normal; 
+    width: 100%; 
+    
+    overflow: hidden; 
+    display: block; 
+    padding-right: 2px;
+    animation: blink 0.75s step-end infinite; 
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+/* ======================================================= */
+/* === LİSTE ELEMANLARI === */
+/* ======================================================= */
+.whyus-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px; 
+    color: #e6e6e6; 
+}
+
+.whyus-list li {
+    margin: 15px 0;
+    padding-left: 25px; 
+    position: relative;
+    background: none; 
+    box-shadow: none; 
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.whyus-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00ff9c; 
+    font-weight: bold;
+}
+
+.whyus-list li:hover {
+    transform: none; 
+    box-shadow: none;
+    color: #fff; 
+}
+
+
+/* ======================================================= */
+/* === TEKNOLOJİ STACK (Sağ Taraf) === */
+/* ======================================================= */
+.tech-stack {
+    flex: 1 1 45%; 
+    text-align: center;
+}
+
+.tech-stack h3 {
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* İkonlara yönelik stiller */
+.tech-icons i {
+    font-size: 32px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    display: inline-block;
+    
+    color: #ffffff; 
+    background-color: rgba(30, 30, 40, 0.6); 
+    border-radius: 10px; 
+    
+    /* Canlı Yeşil Gölge ve Parlaklık Efekti */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.5)); 
+    
+    transition: all 0.4s ease;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.15) rotate(5deg);
+    background-color: rgba(57, 255, 20, 0.1); 
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8); 
+    filter: drop-shadow(0 0 20px rgba(57, 255, 20, 1)); 
+    border: 1px solid rgba(57, 255, 20, 0.5); 
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(57, 255, 20, 0.5); }
+    50% { 
+        box-shadow: 
+        0 0 30px rgba(57, 255, 20, 0.9), 
+        0 0 50px rgba(57, 255, 20, 0.5); 
+    } 
+    100% { box-shadow: 0 0 10px rgba(57, 255, 20, 0.5); }
+}
+
+.tech-icons i:nth-child(odd) {
+    animation: glow 4s infinite alternate;
+}
+
+/* ======================================================= */
+/* === "Portfolyomuzu Görüntüleyin" Buton Stili === */
+/* ======================================================= */
+.button-52 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+    background-color: #00ff9c; 
+    color: #1a1a1a; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+}
+
+.button-52:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+}
+
+@media (min-width: 768px) {
+    .button-52 {
+        padding: 13px 50px 13px;
+    }
+}
+
+
+/* ======================================================= */
+/* === PORTOFOLYO SLIDER SECTION === */
+/* ======================================================= */
+/* ======================================================= */
+/* === PORTOFOLYO SLIDER SECTION (TÜM DÜZELTMELER UYGULANDI) === */
+/* ======================================================= */
+
+  /* ======================================================= */
+/* === PORTOFOLYO SLIDER SECTION (TÜM DÜZELTMELER UYGULANDI) === */
+/* ======================================================= */
+
+/* ======================================================= */
+/* === PORTOFOLYO SLIDER SECTION (TÜM DÜZELTMELER UYGULANDI) === */
+/* ======================================================= */
+
+.portfolio-slider-section {
+    /* KESİLME SORUNU ÇÖZÜMÜ: Yukarı kayma payı için üst padding artırıldı */
+    padding: 120px 0 80px 0; 
+    background-color: #f7f7f7; 
+    position: relative;
+    overflow: hidden; 
+    text-align: center;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15); 
+}
+
+/* YENİ FONT: BBH Sans Bogle (Veya Alternatif) */
+.slider-title {
+    font-family: "BBH Sans Bogle", "Monoton", sans-serif; 
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    
+    /* Neon Efekti */
+    text-shadow: 
+        0 0 5px rgba(0, 255, 156, 0.5), 
+        0 0 15px rgba(0, 255, 156, 0.3); 
+}
+
+/* Arka Plan Efektleri (Baloncuklar) */
+.slider-background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+}
+
+.bubble {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(66, 133, 244, 0.1); 
+    filter: blur(50px);
+    animation: moveBubble 15s infinite ease-in-out alternate;
+}
+
+.bubble-1 { top: 10%; left: 5%; animation-duration: 18s; }
+.bubble-2 { top: 70%; left: 80%; animation-duration: 15s; }
+.bubble-3 { top: 40%; left: 40%; animation-duration: 22s; }
+
+@keyframes moveBubble {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(100px, 150px) scale(1.2); }
+}
+
+/* Slider Yapısı */
+.slider-content-wrapper {
+    max-width: 1300px;   
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    /* KESİLME SORUNU ÇÖZÜMÜ: Kartın kayma mesafesi için üst padding */
+    padding-top: 15px; 
+}
+
+.portfolio-slider-container {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Kaydırılabilir Alan */
+.project-carousel {
+    display: flex;
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 0 10px;
+    margin: 0 30px; 
+    scrollbar-width: none; 
+    flex-grow: 1; 
+}
+
+.project-carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+
+
+/* ======================================================= */
+/* === KONTROL BUTONLARI (OKLAR) - GÜNCELLENDİ === */
+/* ======================================================= */
+.slider-control {
+    background: transparent; 
+    border: none; 
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    font-size: 24px; 
+    cursor: pointer;
+    z-index: 10;
+    color: rgba(0, 0, 0, 0.4); 
+    transition: all 0.3s ease;
+    box-shadow: none; 
+    flex-shrink: 0; 
+}
+
+.slider-control:hover {
+    background: transparent; 
+    color: #00ff9c; 
+    transform: scale(1.2); 
+    
+    /* Yeşil Neon Gölge (sadece ikonda) */
+    text-shadow: 
+        0 0 8px rgba(0, 255, 156, 0.7), 
+        0 0 15px rgba(0, 255, 156, 0.5); 
+    
+    box-shadow: none; 
+}
+
+.slider-control i {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.slider-control:hover i {
+    text-shadow: 
+        0 0 8px rgba(0, 255, 156, 0.7), 
+        0 0 15px rgba(0, 255, 156, 0.5),
+        0 0 20px rgba(0, 255, 156, 0.3);
+}
+/* ======================================================= */
+/* === PROJE KARTI VE TEKNOLOJİ ROZETLERİ === */
+/* ======================================================= */
+
+/* ======================================================= */
+/* === PROJE KARTI (PROJECT-CARD) - SON DÜZELTMELER === */
+/* ======================================================= */
+
+.project-card {
+    flex: 0 0 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    
+    /* Kenarlar Yumuşatıldı */
+    border-radius: 8px; 
+    
+    background-color: #fff;
+    border: 2px solid #000; 
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.7); 
+    
+    /* KESİLME SORUNU ÇÖZÜMÜ: Görünür kalmalı */
+    overflow: visible; 
+    
+    scroll-snap-align: center; 
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    /* Yukarı kayma miktarını KESİLME sorununu çözmek için biraz daha artırdık */
+    transform: translate(-4px, -18px); 
+    z-index: 10; 
+    
+    /* Gölge stili aynı kalır */
+    box-shadow: 
+        10px 10px 0px rgba(0, 0, 0, 0.7), 
+        0 0 30px 5px rgba(0, 255, 156, 0.65); 
+}
+
+/* Resim Boyutu GÜNCELLENDİ */
+.project-card img {
+    width: 100%; 
+    max-height: 220px; /* Görsel yüksekliği 280px'den 220px'e düşürüldü */
+    object-fit: cover; 
+    display: block;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Yeni Eklenen Teknoloji Rozetleri Stilleri */
+.tech-used-badges {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; 
+    padding: 15px 20px; 
+    background-color: #f0f0f0; 
+    border-bottom: 1px solid #e0e0e0; 
+    justify-content: flex-start; 
+}
+
+.tech-badge {
+    display: flex;
+    align-items: center;
+    background-color: #1a1aa6; 
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    font-size: 0.85rem;
+    font-weight: 600;
+    gap: 5px; 
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tech-badge i {
+    color: #00ff9c; 
+    font-size: 1rem;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: left;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); 
+    /* Info alanının alt köşeleri yumuşatıldı */
+    border-radius: 0 0 8px 8px;
+}
+
+/* ======================================================= */
+/* === KONTROL BUTONLARI (OKLAR) - GÜNCELLENDİ === */
+/* ======================================================= */
+.slider-control {
+    background: transparent; 
+    border: none; 
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    font-size: 24px; 
+    cursor: pointer;
+    z-index: 10;
+    color: rgba(0, 0, 0, 0.4); 
+    transition: all 0.3s ease;
+    box-shadow: none; 
+    flex-shrink: 0; 
+}
+
+.slider-control:hover {
+    background: transparent; 
+    color: #00ff9c; 
+    transform: scale(1.2); 
+    
+    /* Yeşil Neon Gölge (sadece ikonda) */
+    text-shadow: 
+        0 0 8px rgba(0, 255, 156, 0.7), 
+        0 0 15px rgba(0, 255, 156, 0.5); 
+    
+    box-shadow: none; 
+}
+
+.slider-control i {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.slider-control:hover i {
+    text-shadow: 
+        0 0 8px rgba(0, 255, 156, 0.7), 
+        0 0 15px rgba(0, 255, 156, 0.5),
+        0 0 20px rgba(0, 255, 156, 0.3);
+}
+/* Kaydırılabilir Alan */
+.project-carousel {
+    display: flex;
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 0 10px;
+    margin: 0 30px; 
+    scrollbar-width: none; 
+    flex-grow: 1; 
+}
+
+.project-carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+.slider-control {
+    /* Arka planı tamamen şeffaf yap */
+    background: transparent; 
+    border: none; /* Kenarlığı kaldır */
+    border-radius: 50%; /* Yuvarlaklığı koruyabiliriz ama efekti olmayacak */
+    width: 50px;
+    height: 50px;
+    font-size: 24px; /* İkon boyutunu biraz büyüttük, daha görünür olsun */
+    cursor: pointer;
+    z-index: 10;
+    
+    /* İkon rengi (başlangıçta hafif gri) */
+    color: rgba(0, 0, 0, 0.4); 
+    
+    /* Geçiş efektleri (renk, transform, gölge) */
+    transition: all 0.3s ease;
+    
+    /* Varsayılan gölgeyi kaldır, sadece hover'da neon gelsin */
+    box-shadow: none; 
+    
+    flex-shrink: 0; /* Küçülmesini engelle */
+}
+
+.slider-control:hover {
+    background: transparent; /* Hover'da da arka plan şeffaf kalsın */
+    color: #25186b; /* İkon rengi yeşil neon olsun */
+    transform: scale(1.2); /* Biraz daha büyüme efekti */
+    
+    /* YENİ: Yeşil Neon Gölge (sadece ikonda) */
+    text-shadow: 
+        0 0 8px rgba(5, 5, 5, 0.7), /* Daha belirgin iç gölge */
+        0 0 15px rgba(0, 255, 156, 0.5); /* Genişleyen parlaklık */
+    
+    box-shadow: none; /* Kutucuk gölgesini kaldır */
+}
+
+/* Ok ikonlarının kendilerine bir miktar gölge ekleyebiliriz */
+.slider-control i {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.slider-control:hover i {
+    text-shadow: 
+        0 0 8px rgba(0, 255, 156, 0.7), /* Neon efekti */
+        0 0 15px rgba(0, 255, 156, 0.5),
+        0 0 20px rgba(0, 255, 156, 0.3);
+}
+
+/* ======================================================= */
+/* === MOBİL UYUMLULUK (RESPONSIVE) === */
+/* ======================================================= */
+@media (max-width: 1024px) {
+    /* Hizmetler */
+    .services-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-illustration {
+        margin-bottom: 50px;
+        min-width: unset;
+        width: 70%;
+    }
+
+    .background-wave {
+        right: -300px;
+        opacity: 0.3;
+    }
+
+    /* Neden Biz & Teknoloji */
+    .whyus-container {
+        flex-direction: column;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .whyus-content-left, .tech-stack {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Slider */
+    .portfolio-slider-container {
+        padding: 0 20px;
+    }
+    
+    .slider-control {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        text-align: left;
+    }
+    
+    .project-carousel {
+        margin: 0; 
+    }
+
+    .project-card {
+        flex: 0 0 90%; 
+    }
+} 
