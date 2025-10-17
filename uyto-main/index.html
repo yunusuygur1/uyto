@@ -1,178 +1,272 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uyto - Geleceğinizi Şekillendiriyoruz</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <span class="logo-text">Uyto</span><sup>®</sup>
-        </div>
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uyto - Geleceğinizi Şekillendiriyoruz</title>
+        <link rel="stylesheet" href="style.css">
         
-        <nav class="nav-links">
-            <a href="#" class="active">Anasayfa</a>
-            <a href="#">Hakkımızda</a>
-            <a href="#">Hizmetler</a>
-            <a href="#">Portfolyo</a>
-            <a href="#">İletişim</a>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Web Tasarım Çözümlerimiz İle<br>Geleceğinizi Şekillendiriyoruz</h1>
-            <p>
-                2025 yılından itibaren Uyto, yenilikçi web tasarım ve dijital çözümlerle 
-                markaların dijital dünyadaki gücünü artırmayı hedeflemektedir. 
-                Modern, ölçeklenebilir ve etkileyici web deneyimleri oluşturuyoruz.
-            </p>
-            
-            <button class="uyto-btn">HİZMETLERİMİZİ İNCELEYİN</button>
-        </div>
-        
-        <div class="hero-image">
-            <img src="images/undraw_building-a-website_1wrp.png" alt="Hero Görseli">
-        </div>
-    </section>
-
-    <section class="services-section">
-        <div class="background-wave">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M-5.32,2.49 C150.00,150.00 317.21,-83.15 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #eef2ff;"></path>
-            </svg>
-        </div>
-    
-        <div class="services-container">
-            <div class="services-illustration" data-aos="zoom-in-right" data-aos-duration="800">
-                <img src="images/responsiveness_rk5g.png" alt="Teknoloji ve geliştirme illüstrasyonu">
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                    </div>
-                    <h3>Website Hizmetleri</h3>
-                    <p>Modern, kullanıcı dostu ve tüm cihazlarla uyumlu (responsive) web siteleri tasarlıyor ve kodluyoruz. Markanızın kimliğini yansıtan özgün tasarımlarla dijital dünyada fark yaratmanızı sağlıyoruz.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in-down" data-aos-delay="250">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                    </div>
-                    <h3>Veritabanı Bağlantıları</h3>
-                    <p>Dinamik ve yönetilebilir web siteleri için güçlü veritabanı altyapıları kuruyoruz. İçerik yönetim sistemleri (CMS) ve özel admin panelleri ile verilerinizi kolayca yönetmenizi sağlıyoruz.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in-up" data-aos-delay="400">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                    </div>
-                    <h3>Optimizasyon Süreçleri</h3>
-                    <p>Web sitenizin hızını ve performansını en üst düzeye çıkarıyoruz. SEO uyumlu kod yapısı ve sayfa yüklenme hızlarını iyileştirerek arama motorlarında daha üst sıralarda yer almanıza yardımcı oluyoruz.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in-down" data-aos-delay="550">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-                    </div>
-                    <h3>Bakım ve Onarım</h3>
-                    <p>Web sitenizin her zaman güncel ve güvende kalması için düzenli bakım hizmetleri sunuyoruz. Olası sorunları hızla tespit edip onararak kesintisiz bir web deneyimi sağlıyoruz.</p>
-                </div>
-            </div>
-        </div>
-    </section>   
-<section class="whyus-section">
-    <div class="whyus-bg"></div>
-
-    <div class="whyus-container">
-        
-        <div class="whyus-content-left">
-            <div class="whyus-text">
-                <h2>Neden <span>Uyto</span> ?</h2>
-                
-                <p class="typing-text"></p> 
-                
-                <span id="animated-text" style="display: none;">
-                    Çünkü sadece kod yazmıyoruz — markanızı dijitalde güçlü bir kimliğe dönüştürüyoruz. Tasarımdan performansa, güvenlikten SEO'ya kadar tüm süreçleri optimize ediyoruz.
-                </span>
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                <span class="logo-text">Uyto</span><sup>®</sup>
             </div>
             
-            <ul class="whyus-list">
-                <li>Modern & Hızlı Altyapı</li>
-                <li>Ölçeklenebilir Sistem Mimarisi</li>
-                <li>Güvenli Kodlama Prensipleri</li>
-                <li>Yaratıcı ve Minimal Tasarımlar</li>
-            </ul>
-            <button class="button-52" role="button">Portfolyomuzu Görüntüleyin</button>
-        </div> 
-
-        <div class="tech-stack">
-            <h3>Kullandığımız Teknolojiler</h3>
-            <div class="tech-icons">
-                <i class="fab fa-html5" title="HTML5"></i>
-                <i class="fab fa-css3-alt" title="CSS3"></i>
-                <i class="fab fa-js-square" title="JavaScript"></i>
-                <i class="fab fa-php" title="PHP"></i>
-                <i class="fas fa-database" title="MySQL"></i>
+            <nav class="nav-links">
+                <a href="#" class="active">Anasayfa</a>
+                <a href="#">Hakkımızda</a>
+                <a href="#">Hizmetler</a>
+                <a href="#">Portfolyo</a>
+                <a href="#">İletişim</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Web Tasarım Çözümlerimiz İle<br>Geleceğinizi Şekillendiriyoruz</h1>
+                <p>
+                    2025 yılından itibaren Uyto, yenilikçi web tasarım ve dijital çözümlerle 
+                    markaların dijital dünyadaki gücünü artırmayı hedeflemektedir. 
+                    Modern, ölçeklenebilir ve etkileyici web deneyimleri oluşturuyoruz.
+                </p>
+                
+                <button class="uyto-btn">HİZMETLERİMİZİ İNCELEYİN</button>
             </div>
+            
+            <div class="hero-image">
+                <img src="images/undraw_building-a-website_1wrp.png" alt="Hero Görseli">
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="background-wave">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M-5.32,2.49 C150.00,150.00 317.21,-83.15 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #eef2ff;"></path>
+                </svg>
+            </div>
+        
+                <div class="services-container">
+                    <div class="services-illustration" data-aos="zoom-in-right" data-aos-duration="800">
+                        <img src="images/responsiveness_rk5g.png" alt="Teknoloji ve geliştirme illüstrasyonu">
+                    </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <h3>Website Hizmetleri</h3>
+                        <p>Modern, kullanıcı dostu ve tüm cihazlarla uyumlu (responsive) web siteleri tasarlıyor ve kodluyoruz. Markanızın kimliğini yansıtan özgün tasarımlarla dijital dünyada fark yaratmanızı sağlıyoruz.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="zoom-in-down" data-aos-delay="250">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                        </div>
+                        <h3>Veritabanı Bağlantıları</h3>
+                        <p>Dinamik ve yönetilebilir web siteleri için güçlü veritabanı altyapıları kuruyoruz. İçerik yönetim sistemleri (CMS) ve özel admin panelleri ile verilerinizi kolayca yönetmenizi sağlıyoruz.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="zoom-in-up" data-aos-delay="400">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3>Optimizasyon Süreçleri</h3>
+                        <p>Web sitenizin hızını ve performansını en üst düzeye çıkarıyoruz. SEO uyumlu kod yapısı ve sayfa yüklenme hızlarını iyileştirerek arama motorlarında daha üst sıralarda yer almanıza yardımcı oluyoruz.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="zoom-in-down" data-aos-delay="550">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
+                        <h3>Bakım ve Onarım</h3>
+                        <p>Web sitenizin her zaman güncel ve güvende kalması için düzenli bakım hizmetleri sunuyoruz. Olası sorunları hızla tespit edip onararak kesintisiz bir web deneyimi sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    <section class="whyus-section">
+        <div class="whyus-bg"></div>
+
+        <div class="whyus-container">
+            
+            <div class="whyus-content-left">
+                <div class="whyus-text">
+                    <h2>Neden <span>Uyto</span> ?</h2>
+                    
+                    <p class="typing-text"></p> 
+                    
+                    <span id="animated-text" style="display: none;">
+                        Çünkü sadece kod yazmıyoruz — markanızı dijitalde güçlü bir kimliğe dönüştürüyoruz. Tasarımdan performansa, güvenlikten SEO'ya kadar tüm süreçleri optimize ediyoruz.
+                    </span>
+                </div>
+                
+                <ul class="whyus-list">
+                    <li>Modern & Hızlı Altyapı</li>
+                    <li>Ölçeklenebilir Sistem Mimarisi</li>
+                    <li>Güvenli Kodlama Prensipleri</li>
+                    <li>Yaratıcı ve Minimal Tasarımlar</li>
+                </ul>
+                <button class="button-52" role="button">Portfolyomuzu Görüntüleyin</button>
+            </div> 
+
+            <div class="tech-stack">
+                <h3>Kullandığımız Teknolojiler</h3>
+                <div class="tech-icons">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-js-square" title="JavaScript"></i>
+                    <i class="fab fa-php" title="PHP"></i>
+                    <i class="fas fa-database" title="MySQL"></i>
+                </div>
+            </div>
+            </section> <section class="portfolio-slider-section">
+        <div class="slider-background-effects">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
         </div>
-        </section> <section class="portfolio-slider-section">
-    <div class="slider-background-effects">
-        <div class="bubble bubble-1"></div>
-        <div class="bubble bubble-2"></div>
-        <div class="bubble bubble-3"></div>
+    <div class="portfolio-container"> 
+
+        <!-- ===================== SLIDER BÖLÜMÜ ===================== -->
+<section class="visiosoft-slider-section">
+  <div class="slider-container">
+    <h2 class="slider-title">Hayallerinizi Bizimle Paylaşın</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://visiosoft.com.tr/assets/img/slider/slide1.png" alt="Smart drive Smart cities">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://visiosoft.com.tr/assets/img/slider/slide2.png" alt="Pay only as you stay">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://visiosoft.com.tr/assets/img/slider/slide3.png" alt="Tech innovations">
+        </div>
+      </div>
+
+      <!-- Slider Kontrolleri -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
-<div class="portfolio-container"> 
-    
+  </div>
+</section>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true // Animasyonlar sadece bir kere tetiklensin
-        });
+<!-- ===================== FOOTER BÖLÜMÜ ===================== -->
+<footer>
+    <div class="uyto-footer-container">
+        
+        <div class="footer-top-content">
+            <div class="footer-logo">
+                <span style="font-size: 24px; font-weight: bold; color: #48488e;">Uyto®</span>
+            </div>
+            <nav class="footer-menu">
+                <a href="#">About <i class="fas fa-angle-right"></i></a>
+                <a href="#">Services <i class="fas fa-angle-right"></i></a>
+                <a href="#">Contact <i class="fas fa-angle-right"></i></a>
+            </nav>
+        </div>
 
-        // ================= YAZMA (TYPING) EFEKTİ JAVASCRIPT =================
+        <hr class="footer-divider-sharp">
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const targetElement = document.querySelector('.typing-text');
-            const fullTextElement = document.getElementById('animated-text');
+        <div class="footer-bottom-content">
             
-            // Elemanlar sayfada mevcutsa çalıştır
-            if (targetElement && fullTextElement) {
-                const fullText = fullTextElement.textContent.trim(); 
-                let charIndex = 0;
+            <div class="footer-contact-info">
+                <p><a href="mailto:uytosoft@gmail.com">uytosoft@gmail.com</a></p>
+                <p><a href="tel:+905388747236">+90 538 874 7236</a></p>
+                <p><a href="#">Management System Policy</a></p>
+            </div>
+            
+            <div class="footer-right-content">
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
                 
-                function typeEffect() {
-                    if (charIndex < fullText.length) {
-                        targetElement.textContent += fullText.charAt(charIndex);
-                        charIndex++;
-                        // Yazma hızı (50 milisaniye)
-                        setTimeout(typeEffect, 50); 
-                    } else {
-                        // Yazma bittiğinde imleci gizle
-                        targetElement.style.borderRight = 'none';
-                    }
-                }
-                
-                // Animasyonu başlat
-                typeEffect();
-            }
-        });
+                <div class="footer-copy">
+                    Copyright © 2025 by Uyto. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-        // ================= JAVASCRIPT SONU =================
-    </script>
-    
-</body>
-</html> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- ===================== SWIPER CDN ===================== -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- ===================== SWIPER AYARLARI ===================== -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
+        
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true // Animasyonlar sadece bir kere tetiklensin
+            });
+
+            // ================= YAZMA (TYPING) EFEKTİ JAVASCRIPT =================
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const targetElement = document.querySelector('.typing-text');
+                const fullTextElement = document.getElementById('animated-text');
+                
+                // Elemanlar sayfada mevcutsa çalıştır
+                if (targetElement && fullTextElement) {
+                    const fullText = fullTextElement.textContent.trim(); 
+                    let charIndex = 0;
+                    
+                    function typeEffect() {
+                        if (charIndex < fullText.length) {
+                            targetElement.textContent += fullText.charAt(charIndex);
+                            charIndex++;
+                            // Yazma hızı (50 milisaniye)
+                            setTimeout(typeEffect, 50); 
+                        } else {
+                            // Yazma bittiğinde imleci gizle
+                            targetElement.style.borderRight = 'none';
+                        }
+                    }
+                    
+                    // Animasyonu başlat
+                    typeEffect();
+                }
+            });
+
+            // ================= JAVASCRIPT SONU =================
+        </script>
+        
+    </body>
+    </html> 
